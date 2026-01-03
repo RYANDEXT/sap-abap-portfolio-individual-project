@@ -1,0 +1,44 @@
+======================================================================
+SAP ABAP CHALLENGE 1: DATABASE STRUCTURE DEFINITION
+Project: Sales Order Management System
+======================================================================
+
+1. TABLE DEFINITION: ZCHAL1_H (Header Table)
+----------------------------------------------------------------------
+Description: Stores general sales order information.
+
+Field Name | Data Element     | Data Type | Length | Key | Description
+-----------|------------------|-----------|--------|-----|------------
+MANDT      | MANDT            | CLNT      | 3      | X   | Client
+OID        | ZCHAL1_DE_OID    | CHAR      | 5      | X   | Order ID
+CNAME      | ZCHAL1_DE_CNAME  | CHAR      | 40     |     | Customer Name
+ODATE      | ZCHAL1_DE_ODATE  | DATS      | 8      |     | Order Date
+
+
+2. TABLE DEFINITION: ZCHAL1_I (Item Table)
+----------------------------------------------------------------------
+Description: Stores detailed line items for each sales order.
+
+Field Name | Data Element     | Data Type | Length | Key | Description
+-----------|------------------|-----------|--------|-----|------------
+MANDT      | MANDT            | CLNT      | 3      | X   | Client
+OID        | ZCHAL1_DE_OID    | CHAR      | 5      | X   | Order ID
+IID        | ZCHAL1_DE_IID    | NUMC      | 3      | X   | Item ID
+PNAME      | ZCHAL1_DE_PNAME  | CHAR      | 50     |     | Product Name
+QTY        | ZCHAL1_DE_QTY    | QUAN      | 13     |     | Quantity
+UNIT       | MEINS            | UNIT      | 3      |     | Base Unit of Measure
+PRICE      | NETPR            | CURR      | 11     |     | Net Price
+CURR       | WAERS            | CUKY      | 5      |     | Currency Key
+
+
+3. DATA DICTIONARY OBJECTS (DOMAINS & DATA ELEMENTS)
+----------------------------------------------------------------------
+* ZCHAL1_OID   : Domain for Order Identification (CHAR 5)
+* ZCHAL1_CNAME : Domain for Customer Names (CHAR 40)
+* ZCHAL1_ODATE : Domain for Transaction Dates (DATS 8)
+* ZCHAL1_PNAME : Domain for Product Descriptions (CHAR 50)
+* ZCHAL1_QTY   : Domain for Quantities (QUAN 13, Dec 3)
+
+Note: Standard SAP Domains used for UNIT (MEINS), PRICE (NETPR), 
+      and CURRENCY (WAERS) to ensure data integrity and reference.
+======================================================================
