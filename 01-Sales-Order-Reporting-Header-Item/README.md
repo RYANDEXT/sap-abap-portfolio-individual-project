@@ -14,9 +14,9 @@ This project demonstrates the ability to manage and report relational data withi
 * **Keywords used:** `SELECT`, `INNER JOIN`, `FOR ALL ENTRIES`, `LOOP AT`, `sy-datum`, `sy-subrc`, `sy-tabix`.
 * **Data Dictionary:** Defined custom Types (`TYPES`) and used specific SAP Data Elements for fields like `MEINS` (Unit), `NETPR` (Price), and `WAERS` (Currency).
 
-## 📸 Output Preview
-*(Recommendation: Insert a screenshot here of your SAP GUI WRITE report output)*
-![Sales Order Report Output](path-to-your-screenshot.png)
+📸 Output Preview 
+<img width="1392" height="850" alt="Screenshot 2026-01-04 at 00 55 12" src="https://github.com/user-attachments/assets/2591725c-69ed-4ca2-a3e9-02a80323c4a2" />
+
 
 ## 📁 Files in this Folder
 * `ZCHAL1_PRG.abap`: Main report source code.
