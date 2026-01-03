@@ -1,0 +1,30 @@
+======================================================================
+SAP ABAP CHALLENGE 2: DATABASE STRUCTURE DEFINITION
+Table Name: ZCHAL2_MATSTOCK
+Description: Material Stock Master Table
+======================================================================
+
+FIELD DEFINITION:
+----------------------------------------------------------------------
+Field Name | Data Element     | Data Type | Length | Dec. | Key | Description
+-----------|------------------|-----------|--------|------|-----|------------
+MANDT      | MANDT            | CLNT      | 3      | 0    | X   | Client
+MAT_ID     | ZCHAL2_DE_MID    | NUMC      | 10     | 0    | X   | Material Id
+MAT_NAME   | ZCHAL2_DE_MNAME  | CHAR      | 40     | 0    |     | Material Name
+CATEGORY   | ZCHAL2_DE_CAT    | CHAR      | 20     | 0    |     | Category
+STOCK_QTY  | ZCHAL2_DE_SQTY   | QUAN      | 13     | 3    |     | Stock Quantity
+UNIT       | ZCHAL2_DE_UNIT   | UNIT      | 3      | 0    |     | Unit
+MIN_STOCK  | ZCHAL2_DE_MINST  | QUAN      | 13     | 3    |     | Minimum Stock
+
+TECHNICAL SETTINGS:
+----------------------------------------------------------------------
+* Data Class   : APPL0 (Master Data)
+* Size Category: 0
+* Buffering    : Not Allowed
+
+DATA DICTIONARY OBJECTS:
+----------------------------------------------------------------------
+* ZCHAL2_DE_MID   : Custom Data Element for Material ID (NUMC 10)
+* ZCHAL2_DE_SQTY  : Quantity field with 3 decimal places
+* ZCHAL2_DE_MINST : Reference field for minimum stock threshold
+======================================================================
