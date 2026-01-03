@@ -43,9 +43,6 @@ ENDIF.
 SELECT h~oid, h~cname, i~pname, ( i~qty * i~price ) AS total FROM ZCHAL1_H AS h INNER JOIN ZCHAL1_I AS i ON h~oid = i~oid INTO TABLE @lt_report.
 
 WRITE: / 'Laporan Penjualan Per Tanggal:', lv_today.
-ULINE.
-WRITE: /1(90) 'No', 5(10) 'Order Id', 17(20) 'Customer Name', 38(20) 'Product Name', 60(15) 'Total (Disc)'.
-ULINE.
 
 LOOP AT lt_report into lwa_report.
   IF lwa_report-total => 100.
